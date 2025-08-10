@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Calculadora de Dano - Cabal Online</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <h1>⚔️ Calculadora de Dano - Cabal Online</h1>
+
+    <section class="input-section">
+      <h2>Status do Personagem</h2>
+      <label>Ataque Base: <input type="number" id="atkBase" /></label>
+      <label>Amp Técnica (%): <input type="number" id="amp" /></label>
+      <label>Dano Crítico (%): <input type="number" id="critDmg" /></label>
+      <label>Perfuração (%): <input type="number" id="penetration" /></label>
+      <label>Aumento de Dano Final (%): <input type="number" id="finalDmg" /></label>
+    </section>
+
+    <section class="boss-section">
+      <h2>Dungeon e Boss</h2>
+      <select id="bossSelect">
+        <option value="none">-- Selecione o Boss --</option>
+        <option value="phantom">Phantom Walker (HP: 1M, DEF: 800)</option>
+        <option value="mech">Mech Tyrant (HP: 2M, DEF: 1200)</option>
+      </select>
+    </section>
+
+    <button onclick="calcularDano()">Calcular Dano</button>
+
+    <section class="result-section">
+      <h2>Resultado</h2>
+      <div id="resultado"></div>
+    </section>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
